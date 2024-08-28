@@ -30,6 +30,9 @@
         
         - name: Setup FTP deployment
           uses: SamKirkland/FTP-Deploy-Action@4.3.0
+          env:
+             FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+             FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           with:
              server: ftpupload.net
              username: ${{ secrets.FTP_USERNAME }}
